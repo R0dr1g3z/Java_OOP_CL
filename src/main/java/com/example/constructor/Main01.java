@@ -1,5 +1,7 @@
 package com.example.constructor;
 
+import com.example.inheritance.AdvancedCalculator;
+
 public class Main01 {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
@@ -12,5 +14,9 @@ public class Main01 {
         calculator.clearOperations();
         calculator.add(5, 5);
         calculator.printOperations();
+        
+        AdvancedCalculator advancedCalculator = new AdvancedCalculator();
+        advancedCalculator.pow(4, 2);
+        advancedCalculator.printOperations();
     }
 }

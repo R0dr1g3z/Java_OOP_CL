@@ -34,7 +34,7 @@ public class Calculator {
         return result;
     }
 
-    private void addToHistory(double a, double b, double c, String switcher) {
+    protected void addToHistory(double a, double b, double c, String switcher) {
         String txt = "";
         switch (switcher) {
             case "add":
@@ -56,6 +56,13 @@ public class Calculator {
             case "divide_0":
                 txt = String.format("Cannot divide by 0");
                 break;
+
+                case "pow":
+                txt = String.format("Powered %s ^ %s = %.2f", a, b, c);
+                break;
+
+                case "root":
+                txt = String.format("%s root of %s = %.2f", b, a, c);
         }
         this.history.add(txt);
     }
